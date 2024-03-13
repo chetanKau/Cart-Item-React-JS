@@ -37,7 +37,7 @@ function LandingScreen(){
         <div>
             <Navbar productCount = {productCount}/>
             <div id='home-container'>
-                <h2>Cart Items</h2>
+                <h1>Your Bag</h1>
                 {phoneData.length === 0 && <p>is Empty</p>}
                 {
                     phoneData.map((elem,index)=>{
@@ -50,10 +50,10 @@ function LandingScreen(){
             <div id='footer'>
                 <div id='total-container'>
                     <p>Total : </p>
-                    <p>{totalCost > 0 ? totalCost : 0}</p>
+                    <p>$ { totalCost > 0 ? totalCost : 0}</p>
                 </div>
                 <div>
-                    <button onClick={clearAllHandler}>Clear Cart</button>
+                    <button onClick={clearAllHandler}>Clear All</button>
                 </div>
             </div>
         </div>
